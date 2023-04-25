@@ -38,7 +38,8 @@ body {
 body {
   line-height: 1.5;
   text-rendering: optimizeSpeed;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased; /* Webkit */
+  -moz-osx-font-smoothing: grayscale; /* Firefox */
 }
 
 /* A elements that don't have a class get default styles */

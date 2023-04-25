@@ -1,6 +1,8 @@
-/* Andy bell's css reset: https://piccalil.li/blog/a-modern-css-reset/ */
+// This CSS reset is inspired by Andy bell and Josh Comeau's CSS reset.
+// Andy bell's css reset: https://piccalil.li/blog/a-modern-css-reset/
+// Josh Comeau's css reset: https://www.joshwcomeau.com/css/custom-css-reset/
 
-/* Box sizing rules */
+/* Use a more-intuitive box-sizing model. */
 *,
 *::before,
 *::after {
@@ -8,16 +10,7 @@
 }
 
 /* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
+* {
   margin: 0;
 }
 
@@ -32,11 +25,20 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-/* Set core body defaults */
+/* Allow percentage-based heights in the application */
+html,
 body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
+  height: 100%;
+}
+
+/* Typographic tweaks!
+    - Add accessible line-height
+    - Improve text rendering
+*/
+body {
   line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* A elements that don't have a class get default styles */
@@ -44,11 +46,14 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-/* Make images easier to work with */
+/* Improve media defaults */
 img,
-picture {
-  max-width: 100%;
+picture,
+video,
+canvas,
+svg {
   display: block;
+  max-width: 100%;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -57,6 +62,17 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */

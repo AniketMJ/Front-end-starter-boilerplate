@@ -26,17 +26,14 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
-/* Allow percentage-based heights in the application */
-html,
-body {
-  height: 100%;
-}
-
-/* Typographic tweaks!
+/*
+  Set core body defaults,
+  Typographic tweaks!
     - Add accessible line-height
     - Improve text rendering
 */
 body {
+  min-height: 100vh;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased; /* Webkit */
